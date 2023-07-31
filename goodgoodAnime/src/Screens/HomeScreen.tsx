@@ -6,7 +6,7 @@ import PopularAnimeScreen from "../Components/PopularAnimes";
 
 const HomeScreen = () => {
     return (
-        <View style={{ backgroundColor: '#000000', flex: 1, paddingVertical: 72 }}>
+        <View style={{ backgroundColor: '#000000', flex: 1, paddingTop: 72 }}>
             <ScrollView>
             <Ionicons name="ios-menu" size={32} color="white" style={{paddingHorizontal: 12}} />
             <NewEpisodes/>

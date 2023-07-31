@@ -5,11 +5,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import AnimeDetailsScreen from './src/Screens/AnimeDetails';
 import { PopularTypes } from './src/Models/PopularAnimesModel';
 import FullScreenVideoPlayer from './src/Screens/VideoPlayer';
+import BottomNavigation from './src/Components/BottomNavigation';
 
 export type RootStackParamList = {
   HomeScreen: undefined;
   PlayerScreen: { streamingLink: string };
   AnimeDetails: { id: string };
+  BottomNavigation: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -21,6 +23,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{
         headerShown: false
       }}>
+         <Stack.Screen name="BottomNavigation" component={BottomNavigation} />
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="AnimeDetails" component={AnimeDetailsScreen} />
         <Stack.Screen name="PlayerScreen" component={FullScreenVideoPlayer} />
